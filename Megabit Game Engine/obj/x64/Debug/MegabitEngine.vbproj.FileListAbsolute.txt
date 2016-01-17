@@ -1,0 +1,2 @@
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\x64\Debug\Megabit Game Engine.exe.config
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\obj\x64\Debug\MegabitEngine.vbprojResolveAssemblyReference.cache

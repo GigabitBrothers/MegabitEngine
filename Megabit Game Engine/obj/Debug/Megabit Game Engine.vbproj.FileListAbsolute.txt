@@ -1,0 +1,14 @@
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.exe.config
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.vbprojResolveAssemblyReference.cache
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit_Game_Engine.Resources.resources
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.vbproj.GenerateResource.Cache
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.exe
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.pdb
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.xml
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.Compatibility.dll
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.dll
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.GLControl.dll
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.exe
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.xml
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.pdb
+c:\users\sidney james bronson\documents\visual studio 2013\Projects\Megabit Game Engine\Megabit Game Engine\bin\Debug\irrKlang.NET4.dll

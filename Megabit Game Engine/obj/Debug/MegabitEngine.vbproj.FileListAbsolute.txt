@@ -1,0 +1,28 @@
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.exe.config
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.exe
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.xml
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.pdb
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.exe
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.pdb
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.xml
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\irrKlang.NET4.dll
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.Compatibility.dll
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.dll
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\obj\Debug\MegabitEngine.vbprojResolveAssemblyReference.cache
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\obj\Debug\MegabitEngine.Resources.resources
+C:\Users\Sidney James Bronson\Documents\Megabit Game Engine\Megabit Game Engine\obj\Debug\MegabitEngine.vbproj.GenerateResource.Cache
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.exe.config
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.exe
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.pdb
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\Megabit Game Engine.xml
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\irrKlang.NET4.dll
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.Compatibility.dll
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.dll
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\obj\Debug\MegabitEngine.Resources.resources
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\obj\Debug\MegabitEngine.vbproj.GenerateResource.Cache
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.exe
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.xml
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\obj\Debug\Megabit Game Engine.pdb
+C:\Users\Sidney James Bronson\Workbox\Code\mbit_src\Megabit Game Engine\Megabit Game Engine\obj\Debug\MegabitEngine.vbprojResolveAssemblyReference.cache
