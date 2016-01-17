@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -84,11 +84,11 @@
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-<PropertyGroup>
-  <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  <PropertyGroup>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
     None
   </ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-</PropertyGroup>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <DefineDebug>true</DefineDebug>
@@ -185,8 +185,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\MegabitEngine.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Megabit_Game_Engine.Resources.resources" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Megabit Game Engine.exe.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -197,11 +200,32 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Megabit Game Engine.vbproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\Megabit Game Engine.vbprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\MegabitEngine.vbproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\MegabitEngine.vbprojResolveAssemblyReference.cache" />
+    <None Include="obj\x64\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x64\Debug\MegabitEngine.vbprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Megabit Game Engine.exe" />
+    <Content Include="bin\Debug\Megabit Game Engine.pdb" />
     <Content Include="ikpFlac.dll" />
     <Content Include="ikpMP3.dll" />
     <Content Include="irrKlang.NET4.dll" />
+    <Content Include="obj\Debug\Megabit Game Engine.exe" />
+    <Content Include="obj\Debug\Megabit Game Engine.pdb" />
+    <Content Include="obj\Debug\Megabit Game Engine.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Megabit Game Engine.xml" />
+    <Content Include="obj\Debug\MegabitEngine.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\x64\Debug\MegabitEngine.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\x64\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="obj\x86\Debug\MegabitEngine.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
     <Content Include="OpenTK.Compatibility.dll" />
     <Content Include="OpenTK.dll" />
     <Content Include="OpenTK.GLControl.dll" />
@@ -222,6 +246,13 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="bin\x64\Debug\" />
+    <Folder Include="bin\x64\Release\" />
+    <Folder Include="bin\x86\Debug\" />
+    <Folder Include="bin\x86\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
