@@ -116,10 +116,10 @@ Public Class Core
 
     Private Overloads Sub OnMouseMove(ByVal sender As Object, ByVal e As MouseMoveEventArgs)
 
-            If mousereset = True Then
-                mouseDelta = New Vector2(e.XDelta, e.YDelta)
-                mousereset = False
-            End If
+        If mousereset = True Then
+            mouseDelta = New Vector2(e.XDelta, e.YDelta)
+            mousereset = False
+        End If
 
     End Sub
 

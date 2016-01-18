@@ -67,7 +67,7 @@ Public Class Stage
 
         Next
 
-        Build.Door("left_vertical", "in", 10, 1.25, 30)
+        Build.Door("left_vertical", "out", 10, 1.25, 30)
         
     End Sub
 

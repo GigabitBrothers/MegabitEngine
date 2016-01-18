@@ -530,20 +530,20 @@ Public Class Build
                 GL.End()
             End If
 
-            If swingdirection = "in" Then
+            If swingdirection = "out" Then
                 Paint.Material(5)
                 GL.Begin(BeginMode.Quads)
                 GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY + 3.4375, posZ)
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY, posZ - dr_val2(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY + 3.4375, posZ + dr_val2(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY, posZ + dr_val2(1))
                 GL.TexCoord2(0.0, 1.0) : GL.Vertex3(posX, posY, posZ)
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX - dr_val3(1), posY + 3.4375, posZ + 0.15625 - dr_val3(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(posX - dr_val3(1), posY, posZ + 0.15625 - dr_val3(1))
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX - dr_val3(1), posY + 3.4375, (posZ + 0.15625 - dr_val3(1)))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY + 3.4375, ((posZ + 0.15625) - dr_val3(1)) + dr_val2(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY, ((posZ + 0.15625) - dr_val3(1)) + dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(posX - dr_val3(1), posY, (posZ + 0.15625 - dr_val3(1)))
                 GL.End()
 
                 Paint.Material(6)
