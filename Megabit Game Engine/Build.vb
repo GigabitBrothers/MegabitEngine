@@ -548,18 +548,19 @@ Public Class Build
 
                 Paint.Material(6)
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY, posZ - dr_val2(1))
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY + 3.4375, posZ + dr_val2(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY + 3.4375, ((posZ + 0.15625) - dr_val3(1)) + dr_val2(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY, ((posZ + 0.15625) - dr_val3(1)) + dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val2(1), posY, posZ + dr_val2(1))
                 GL.End()
 
-                GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY + 3.4375, posZ)
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(posX, posY, posZ)
-                GL.End()
+                'GL.Begin(BeginMode.Quads)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY + 3.4375, posZ) 'up left (no change)
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1)) 'up right
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1)) 'down right
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(posX, posY, posZ) 'down left (no change)
+                'GL.End()
+
                 GL.Begin(BeginMode.Quads)
                 GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
                 GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
