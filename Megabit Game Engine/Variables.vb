@@ -32,7 +32,7 @@ Public Class Variables
     Public Shared mousereset As Boolean = False
     Public Shared lookpoint As Vector3
     Public Shared textures(2048) As Integer
-    Public Shared noclip As Boolean = False
+    Public Shared noclip As Boolean = True
 
     'Physics:
     Public Shared cbnd(2048) As Double

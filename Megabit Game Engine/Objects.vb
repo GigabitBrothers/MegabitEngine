@@ -18,7 +18,9 @@ Imports MegabitEngine.Variables
 Public Class Objects
 
     Public Shared Sub Interactive_Logic()
+
         Door_Logic()
+
     End Sub
 
     Private Shared Sub Door_Logic()
