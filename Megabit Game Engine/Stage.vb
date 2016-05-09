@@ -63,12 +63,18 @@ Public Class Stage
                     Paint.Material(t)
                     Build.Wall(d, w, h, x, y, z)
 
+                Case "(sndout)"
+
+                    Dim d As Integer = Integer.Parse(parameters(1))
+                    Dim x As Single = Single.Parse(parameters(2))
+                    Dim y As Single = Single.Parse(parameters(3))
+                    Dim z As Single = Single.Parse(parameters(4))
+
+                    Build.Snd_Output(d, x, y, z)
+
             End Select
 
         Next
-
-        Build.Door("left_vertical", "in", 10, 1.25, 30)
-        Build.Door("right_vertical", "in", 8.125, 1.25, 30)
 
     End Sub
 

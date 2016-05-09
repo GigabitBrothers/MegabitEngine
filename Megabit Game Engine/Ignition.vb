@@ -40,7 +40,7 @@ Public Class Ignition
         Window_Width = 1024
         Window_Height = 768
         Window_Title = "Megabit Engine (Codename Midnight) v0.1.25a"
-        current_map = "engine\sdk\dev_map\engine_test"
+        Current_Map = "engine\sdk\dev_map\sound_test"
 
     End Sub
 

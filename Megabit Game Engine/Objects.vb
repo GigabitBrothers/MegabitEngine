@@ -25,25 +25,44 @@ Public Class Objects
 
     Private Shared Sub Door_Logic()
 
-        If door_rotating = True Then
+        If door_trig1 = True Then
+            If door_rotating = True Then
 
-            'Setting location data ---------------------------------
-            If dr_val1(1) < 1.71875 Then
-                dr_val1(1) += 0.0286458333333333
-            End If
-            If dr_val2(1) < 1.875 Then
-                dr_val2(1) += 0.03125
-            End If
-            If dr_val3(1) < 0.15625 Then
-                dr_val3(1) += 0.0026041666666667
-            End If
-            If dr_val4(1) < 2.03125 Then
-                dr_val4(1) += 0.0338541666666667
-            End If
-            '-------------------------------------------------------
+                If dr_rotdir = "opening" Then
+                    'Setting location data ---------------------------------
+                    If dr_val1(1) < 1.71875 Then
+                        dr_val1(1) += 0.0286458333333333
+                    End If
+                    If dr_val2(1) < 1.875 Then
+                        dr_val2(1) += 0.03125
+                    End If
+                    If dr_val3(1) < 0.15625 Then
+                        dr_val3(1) += 0.0026041666666667
+                    End If
+                    If dr_val4(1) < 2.03125 Then
+                        dr_val4(1) += 0.0338541666666667
+                    End If
+                    '-------------------------------------------------------
+                End If
 
+                If dr_rotdir = "closing" Then
+                    'Setting location data ---------------------------------
+                    If dr_val1(1) > 0 Then
+                        dr_val1(1) -= 0.0286458333333333
+                    End If
+                    If dr_val2(1) > 0 Then
+                        dr_val2(1) -= 0.03125
+                    End If
+                    If dr_val3(1) > 0 Then
+                        dr_val3(1) -= 0.0026041666666667
+                    End If
+                    If dr_val4(1) > 0 Then
+                        dr_val4(1) -= 0.0338541666666667
+                    End If
+                    '-------------------------------------------------------
+                End If
+            End If
         End If
-
     End Sub
 
 End Class

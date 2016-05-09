@@ -112,9 +112,9 @@ Public Class Build
                 End If
             End If
 
-        End If
+            '----------------------------
 
-        '----------------------------
+        End If
 
         If facedirection = 4 Then
 
@@ -580,97 +580,362 @@ Public Class Build
 
         If hingeorgin = "right_vertical" Then
 
+            Dim dr_rv_posX As Double = (posX + 1.875)
+
+            If playerlocation.Z > posZ - 3 And playerlocation.Z < posZ + 3 Then
+                If playerlocation.X > (posX - 1.5) Then
+                    If playerlocation.X < (dr_rv_posX + 1.5) Then
+                        door_trig1 = True
+                    End If
+                End If
+            Else
+                door_trig1 = False
+            End If
+
             If swingdirection = "in" Then
                 Paint.Material(5)
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875), posY + 3.4375, posZ)
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY, posZ - dr_val2(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875), posY + 3.4375, posZ)
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY, posZ - dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875), posY, posZ)
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY + 3.4375, posZ + 0.15625 - dr_val3(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY, posZ + 0.15625 - dr_val3(1))
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY + 3.4375, posZ + 0.15625 - dr_val3(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY, posZ + 0.15625 - dr_val3(1))
                 GL.End()
 
                 Paint.Material(6)
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875), posY + 3.4375, posZ)
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875), posY + 3.4375, posZ)
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875), posY, posZ)
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val2(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(posX - dr_val1(1), posY, posZ - dr_val2(1))
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY + 3.4375, posZ - dr_val2(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY, (posZ + 0.15625) - dr_val4(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY, posZ - dr_val2(1))
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY + 3.4375, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875), posY + 3.4375, posZ)
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY, posZ - dr_val2(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY, posZ - dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875), posY, posZ)
                 GL.End()
             End If
 
             If swingdirection = "out" Then
                 Paint.Material(5)
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875), posY + 3.4375, posZ)
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY, posZ - dr_val2(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875), posY + 3.4375, posZ)
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY + 3.4375, posZ + dr_val2(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY, posZ + dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875), posY, posZ)
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY + 3.4375, posZ + 0.15625 - dr_val3(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY, posZ + 0.15625 - dr_val3(1))
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1) + dr_val2(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY, (posZ + 0.15625) - dr_val3(1) + dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
                 GL.End()
 
                 Paint.Material(6)
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875), posY + 3.4375, posZ)
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875), posY + 3.4375, posZ)
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875), posY, posZ)
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val2(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(posX - dr_val1(1), posY, posZ - dr_val2(1))
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY + 3.4375, posZ + dr_val2(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1) + dr_val2(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY, (posZ + 0.15625) - dr_val3(1) + dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY, posZ + dr_val2(1))
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY + 3.4375, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY + 3.4375, posZ - dr_val2(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY + 3.4375, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875), posY + 3.4375, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY + 3.4375, (posZ + 0.15625) + dr_val2(1) - dr_val3(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY + 3.4375, posZ + dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY + 3.4375, posZ)
                 GL.End()
 
                 GL.Begin(BeginMode.Quads)
-                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 1.875) + dr_val3(1), posY, (posZ + 0.15625) - dr_val3(1))
-                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(posX - dr_val1(1), posY, (posZ + 0.15625) - dr_val4(1))
-                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(posX - dr_val2(1), posY, posZ - dr_val2(1))
-                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((posX - 1.875), posY, posZ)
+                GL.TexCoord2(0.0, 0.0) : GL.Vertex3((dr_rv_posX - 1.875), posY, (posZ + 0.15625) - dr_val3(1))
+                GL.TexCoord2(1.0, 0.0) : GL.Vertex3(dr_rv_posX - dr_val2(1), posY, (posZ + 0.15625) + dr_val2(1) - dr_val3(1))
+                GL.TexCoord2(1.0, 1.0) : GL.Vertex3(dr_rv_posX - dr_val1(1), posY, posZ + dr_val2(1))
+                GL.TexCoord2(0.0, 1.0) : GL.Vertex3((dr_rv_posX - 1.875) + dr_val3(1), posY, posZ)
                 GL.End()
             End If
+        End If
+
+    End Sub
+
+    Public Shared Sub Snd_Output(dir As Integer, posX As Double, posY As Double, posZ As Double)
+
+        Dim Height As Double = 1.25
+
+        If dir = 4 Then
+
+            'Sides
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY + Height, (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.9375), (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.9375), posY, (posZ - 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX,  posY, (posZ - 0.46875))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY + Height, (posZ + 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.9375), (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.9375), posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX,  posY, (posZ + 0.46875))
+            GL.End()
+
+            'Back
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3(posX, (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3(posX, posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX,  posY, (posZ - 0.46875))
+            GL.End()
+
+            'Front
+
+            Paint.Material(13)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 0.9375), (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.9375), (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.9375), posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX - 0.9375),  posY, (posZ - 0.46875))
+            GL.End()
+
+            'Top and Bottom
+
+            Paint.Material(12)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.9375), (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.9375), (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX, (posY + Height), (posZ + 0.46875))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY, (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.9375), posY, (posZ - 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.9375), posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX, posY, (posZ + 0.46875))
+            GL.End()
+
+        End If
+
+        If dir = 2 Then
+
+            'Sides
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY + Height, (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX + 0.9375), (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX + 0.9375), posY, (posZ - 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX,  posY, (posZ - 0.46875))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY + Height, (posZ + 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX + 0.9375), (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX + 0.9375), posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX,  posY, (posZ + 0.46875))
+            GL.End()
+
+            'Back
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3(posX, (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3(posX, posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX,  posY, (posZ - 0.46875))
+            GL.End()
+
+            'Front
+
+            Paint.Material(13)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.9375), (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX + 0.9375), (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX + 0.9375), posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.9375),  posY, (posZ - 0.46875))
+            GL.End()
+
+            'Top and Bottom
+
+            Paint.Material(12)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX + 0.9375), (posY + Height), (posZ - 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX + 0.9375), (posY + Height), (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX, (posY + Height), (posZ + 0.46875))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3(posX, posY, (posZ - 0.46875))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX + 0.9375), posY, (posZ - 0.46875))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX + 0.9375), posY, (posZ + 0.46875))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3(posX,  posY, (posZ + 0.46875))
+            GL.End()
+
+        End If
+
+        If dir = 1 Then
+
+            'Front
+
+            Paint.Material(13)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ - 0.9375))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ - 0.9375))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ - 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ - 0.9375))
+            GL.End()
+
+            'Back
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ))
+            GL.End()
+
+            'Sides
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ - 0.9375))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ - 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ - 0.9375))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ - 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ))
+            GL.End()
+
+            'Top and Bottom
+
+            Paint.Material(12)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), posZ)
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), posZ)
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ - 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ - 0.9375))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY), posZ)
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY), posZ)
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), (posY), (posZ - 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), (posY), (posZ - 0.9375))
+            GL.End()
+
+        End If
+
+        If dir = 3 Then
+
+            'Front
+
+            Paint.Material(13)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ + 0.9375))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ + 0.9375))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ + 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ + 0.9375))
+            GL.End()
+
+            'Back
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ))
+            GL.End()
+
+            'Sides
+
+            Paint.Material(11)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ + 0.9375))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ + 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), posY, (posZ))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ))
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ + 0.9375))
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ + 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX - 0.46875), posY, (posZ))
+            GL.End()
+
+            'Top and Bottom
+
+            Paint.Material(12)
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY + Height), posZ)
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY + Height), posZ)
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), (posY + Height), (posZ + 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), (posY + Height), (posZ + 0.9375))
+            GL.End()
+
+            GL.Begin(BeginMode.Quads)
+            GL.TexCoord2(0.0, 0.0) : GL.Vertex3((posX + 0.46875), (posY), posZ)
+            GL.TexCoord2(1, 0.0) : GL.Vertex3((posX - 0.46875), (posY), posZ)
+            GL.TexCoord2(1, 1) : GL.Vertex3((posX - 0.46875), (posY), (posZ + 0.9375))
+            GL.TexCoord2(0.0, 1) : GL.Vertex3((posX + 0.46875), (posY), (posZ + 0.9375))
+            GL.End()
 
         End If
 

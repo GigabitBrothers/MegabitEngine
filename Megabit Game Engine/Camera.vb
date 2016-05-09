@@ -17,7 +17,7 @@ Public Class Camera
 
         '-------------------------------------------------
         cameraMatrix = Matrix4.Identity
-        playerlocation = New Vector3(0.0, 2.0, 0.0)
+        playerlocation = New Vector3(0.0, 2.0, -6.0)
         mouseDelta = New Vector2
         '-------------------------------------------------
 

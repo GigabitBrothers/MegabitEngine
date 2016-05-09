@@ -16,6 +16,7 @@ Imports MegabitEngine.Variables
 Public Class Variables
 
     'Ignition:
+    Public Shared Current_Map As String
     Public Shared Window_Title As String
     Public Shared Window_Width As Integer
     Public Shared Window_Height As Integer
@@ -32,7 +33,7 @@ Public Class Variables
     Public Shared mousereset As Boolean = False
     Public Shared lookpoint As Vector3
     Public Shared textures(2048) As Integer
-    Public Shared noclip As Boolean = True
+    Public Shared noclip As Boolean = False
 
     'Physics:
     Public Shared cbnd(2048) As Double
@@ -67,14 +68,18 @@ Public Class Variables
     Public Shared CR_Y As Integer
     Public Shared CR_Width As Integer
     Public Shared CR_Height As Integer
-    Public Shared current_map As String
     Public Shared screen_width As Integer
     Public Shared screen_xbound As Integer
     Public Shared screen_ybound As Integer
     Public Shared screen_height As Integer
 
     'Objects
+    Public Shared door_trig1 As Boolean = False
+    Public Shared door_trig2 As Boolean = False
+    Public Shared door_trig3 As Boolean = False
+    Public Shared door_trig4 As Boolean = False
     Public Shared door_rotating As Boolean = False
+    Public Shared dr_rotdir As String = "-"
     Public Shared dr_type As Integer
     Public Shared dr_axis As Integer
     Public Shared dr_swing As Integer

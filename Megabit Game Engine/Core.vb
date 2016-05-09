@@ -51,7 +51,7 @@ Public Class Core
 
         MyBase.OnRenderFrame(e)
         Camera.Render_Event()
-        Stage.Load(current_map)
+        Stage.Load(Current_Map)
         HUDTest()
         SwapBuffers()
 
@@ -69,6 +69,20 @@ Public Class Core
         GL.Clear(ClearBufferMask.DepthBufferBit)
 
         GL.BindTexture(TextureTarget.Texture2D, textures(7))
+
+        GL.Begin(BeginMode.TriangleFan)
+
+        GL.Vertex3(-1.0F, -0.5F, -4.0F)
+        GL.Vertex3(1.0F, -0.5F, -4.0F)
+        GL.Vertex3(0.0F, 0.5F, -4.0F)
+
+        GL.Vertex3(-1.5F, 0.0F, -4.0F)
+        GL.Vertex3(-1.8F, -1.0F, -4.0F)
+        GL.Vertex3(0.2F, -1.5F, -4.0F)
+
+        GL.Vertex3(1.0F, -0.5F, -4.0F)
+
+        GL.End()
 
         GL.Begin(BeginMode.Quads)
         GL.TexCoord2(0, 0) : GL.Vertex2(-25, 35)
@@ -146,7 +160,15 @@ Public Class Core
             Move_Right()
         End If
         If Keyboard(Input.Key.V) Then
+            If door_trig1 = True Then
+                door_rotating = True
+                dr_rotdir = "opening"
+            End If
+        End If
+
+        If Keyboard(Input.Key.B) Then
             door_rotating = True
+            dr_rotdir = "closing"
         End If
 
         If Keyboard(Input.Key.LControl) Then

@@ -19,8 +19,8 @@ Public Class Physics
 
         gravityloop.Start()
         collisionloop.Start()
-        collisionloop.Priority = Threading.ThreadPriority.Highest
-        gravityloop.Priority = Threading.ThreadPriority.Highest
+        'collisionloop.Priority = Threading.ThreadPriority.Highest
+        'gravityloop.Priority = Threading.ThreadPriority.AboveNormal
 
     End Sub
 
