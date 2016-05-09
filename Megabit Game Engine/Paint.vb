@@ -35,7 +35,7 @@ Public Class Paint
         UnpackMaterial(textures(12), "engine/sdk/dev_mat/sndtopbottom.png")
         UnpackMaterial(textures(13), "engine/sdk/dev_mat/sndfront.png")
         UnpackMaterial(textures(14), "engine/sdk/dev_mat/nope.png")
-        UnpackMaterial(textures(15), "engine/sdk/dev_mat/floor2.png")
+        UnpackMaterial(textures(15), "engine/sdk/dev_mat/alt.png")
 
     End Sub
 
