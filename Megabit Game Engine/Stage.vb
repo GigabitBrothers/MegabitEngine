@@ -26,6 +26,17 @@ Public Class Stage
             Dim parameters() As String = line.Split(Microsoft.VisualBasic.ChrW(32))
             Select Case (parameters(0))
 
+                Case "(start)"
+
+                    Dim x As Single = Single.Parse(parameters(1))
+                    Dim y As Single = Single.Parse(parameters(2))
+                    Dim z As Single = Single.Parse(parameters(3))
+
+                    StartPositionX = x
+                    StartPositionY = y
+                    StartPositionZ = z
+
+
                 Case "(flr)"
 
                     Dim w As Single = Single.Parse(parameters(1))
@@ -78,4 +89,29 @@ Public Class Stage
 
     End Sub
 
+    Public Shared Sub Load_Pre_RenderData(ByVal Path As String)
+
+        Dim result As String = ""
+        Dim fileRead As StreamReader = New StreamReader(Path & ".mbw")
+        result = fileRead.ReadToEnd
+        fileRead.Close()
+        Dim resultLines() As String = result.Split(vbLf)
+        For Each line As String In resultLines
+            Dim parameters() As String = line.Split(Microsoft.VisualBasic.ChrW(32))
+            Select Case (parameters(0))
+
+                Case "(start)"
+
+                    Dim x As Single = Single.Parse(parameters(1))
+                    Dim y As Single = Single.Parse(parameters(2))
+                    Dim z As Single = Single.Parse(parameters(3))
+
+                    StartPositionX = x
+                    StartPositionY = y
+                    StartPositionZ = z
+
+            End Select
+        Next
+
+    End Sub
 End Class

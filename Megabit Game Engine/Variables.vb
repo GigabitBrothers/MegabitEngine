@@ -34,6 +34,9 @@ Public Class Variables
     Public Shared lookpoint As Vector3
     Public Shared textures(2048) As Integer
     Public Shared noclip As Boolean = False
+    Public Shared StartPositionX As Double = 0.0
+    Public Shared StartPositionY As Double = 0.0
+    Public Shared StartPositionZ As Double = 0.0
 
     'Physics:
     Public Shared cbnd(2048) As Double

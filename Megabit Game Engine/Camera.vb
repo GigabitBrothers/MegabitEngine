@@ -17,7 +17,8 @@ Public Class Camera
 
         '-------------------------------------------------
         cameraMatrix = Matrix4.Identity
-        playerlocation = New Vector3(0.0, 2.0, -6.0)
+        Stage.Load_Pre_RenderData(Current_Map)
+        playerlocation = New Vector3(StartPositionX, StartPositionY, StartPositionZ)
         mouseDelta = New Vector2
         '-------------------------------------------------
 
